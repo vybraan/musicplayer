@@ -1,2 +1,2 @@
 # musicplayer
-A Simple music player in Java
+A Simple music player in Python
