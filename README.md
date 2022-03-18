@@ -1,2 +1,2 @@
 # musicplayer
-A Simple music player in Python
+A Simple music player
