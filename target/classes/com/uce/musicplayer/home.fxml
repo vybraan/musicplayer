@@ -13,6 +13,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.TilePane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
@@ -20,6 +21,198 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: GREEN;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uce.musicplayer.HomeController">
     <children>
+        <AnchorPane fx:id="sidebar" layoutX="-27.0" layoutY="72.0" prefHeight="415.0" prefWidth="200.0" style="-fx-background-color: #14141b;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <VBox layoutX="20.0" layoutY="-7.0" prefHeight="453.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <JFXButton fx:id="btn_home" alignment="BASELINE_LEFT" cache="true" defaultButton="true" graphicTextGap="22.0" prefHeight="50.0" prefWidth="200.0" styleClass="sidebar" stylesheets="@css/styles.css" text="Home" textFill="WHITE">
+                            <font>
+                                <Font name="JetBrains Mono SemiBold" size="12.0" />
+                            </font>
+                            <graphic>
+                                <FontIcon iconColor="#6e0fd3" iconLiteral="fa-home" iconSize="22" />
+                            </graphic>
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin>
+                            <padding>
+                                <Insets left="30.0" />
+                            </padding>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_queue" alignment="BASELINE_LEFT" cache="true" graphicTextGap="22.0" prefHeight="50.0" prefWidth="200.0" styleClass="sidebar" stylesheets="@css/styles.css" text="Play queue" textFill="WHITE">
+                            <font>
+                                <Font name="JetBrains Mono SemiBold" size="12.0" />
+                            </font>
+                            <graphic>
+                                <FontIcon iconColor="#f5ce09" iconLiteral="fa-home" iconSize="22" />
+                            </graphic>
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin>
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                            <padding>
+                                <Insets left="30.0" />
+                            </padding>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_playlist" alignment="BASELINE_LEFT" cache="true" graphicTextGap="22.0" prefHeight="50.0" prefWidth="200.0" styleClass="sidebar" stylesheets="@css/styles.css" text="Playlists" textFill="WHITE">
+                            <font>
+                                <Font name="JetBrains Mono SemiBold" size="12.0" />
+                            </font>
+                            <graphic>
+                                <FontIcon iconColor="#115ad1" iconLiteral="fa-list" iconSize="22" />
+                            </graphic>
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin>
+                            <padding>
+                                <Insets left="30.0" />
+                            </padding>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_artists" alignment="BASELINE_LEFT" cache="true" graphicTextGap="22.0" prefHeight="50.0" prefWidth="200.0" styleClass="sidebar" stylesheets="@css/styles.css" text="Artists" textFill="WHITE">
+                            <font>
+                                <Font name="JetBrains Mono SemiBold" size="12.0" />
+                            </font>
+                            <graphic>
+                                <FontIcon iconColor="#dd1b09" iconLiteral="fa-user-circle" iconSize="22" />
+                            </graphic>
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin>
+                            <padding>
+                                <Insets left="30.0" />
+                            </padding>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_albums" alignment="BASELINE_LEFT" cache="true" graphicTextGap="22.0" layoutX="10.0" layoutY="160.0" prefHeight="50.0" prefWidth="200.0" styleClass="sidebar" stylesheets="@css/styles.css" text="Albums" textFill="WHITE">
+                            <font>
+                                <Font name="JetBrains Mono SemiBold" size="12.0" />
+                            </font>
+                            <graphic>
+                                <FontIcon iconColor="#115ad1" iconLiteral="fa-vcard" iconSize="22" />
+                            </graphic>
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin>
+                            <padding>
+                                <Insets left="30.0" />
+                            </padding>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_songs" alignment="BASELINE_LEFT" cache="true" graphicTextGap="22.0" prefHeight="50.0" prefWidth="200.0" styleClass="sidebar" stylesheets="@css/styles.css" text="Songs" textFill="WHITE">
+                            <font>
+                                <Font name="JetBrains Mono SemiBold" size="12.0" />
+                            </font>
+                            <graphic>
+                                <FontIcon iconColor="#f5ce09" iconLiteral="fa-music" iconSize="22" />
+                            </graphic>
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin>
+                            <padding>
+                                <Insets left="30.0" />
+                            </padding>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_genres" alignment="BASELINE_LEFT" cache="true" graphicTextGap="22.0" prefHeight="50.0" prefWidth="200.0" styleClass="sidebar" stylesheets="@css/styles.css" text="Genres" textFill="WHITE">
+                            <font>
+                                <Font name="JetBrains Mono SemiBold" size="12.0" />
+                            </font>
+                            <graphic>
+                                <FontIcon iconColor="#6e0fd3" iconLiteral="fa-home" iconSize="22" />
+                            </graphic>
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin>
+                            <padding>
+                                <Insets left="30.0" />
+                            </padding>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_folders" alignment="BASELINE_LEFT" cache="true" graphicTextGap="22.0" prefHeight="50.0" prefWidth="200.0" styleClass="sidebar" stylesheets="@css/styles.css" text="Folders" textFill="WHITE">
+                            <font>
+                                <Font name="JetBrains Mono SemiBold" size="12.0" />
+                            </font>
+                            <graphic>
+                                <FontIcon iconColor="#f5ce09" iconLiteral="fa-folder" iconSize="22" />
+                            </graphic>
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin>
+                            <padding>
+                                <Insets left="30.0" />
+                            </padding>
+                        </JFXButton>
+                        <Separator prefWidth="200.0" />
+                        <JFXButton fx:id="btn_settings" alignment="BASELINE_LEFT" cache="true" graphicTextGap="22.0" prefHeight="50.0" prefWidth="200.0" styleClass="sidebar" stylesheets="@css/styles.css" text="Settings" textFill="WHITE">
+                            <font>
+                                <Font name="JetBrains Mono SemiBold" size="12.0" />
+                            </font>
+                            <graphic>
+                                <FontIcon iconColor="#115ad1" iconLiteral="fa-gear" iconSize="22" />
+                            </graphic>
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin>
+                            <padding>
+                                <Insets left="30.0" />
+                            </padding>
+                        </JFXButton>
+                    </children>
+                </VBox>
+            </children>
+            <effect>
+                <DropShadow />
+            </effect>
+        </AnchorPane>
+        <BorderPane fx:id="bottom_player" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: #14141b;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <top>
+                <ProgressBar fx:id="progress_bar" prefHeight="10.0" prefWidth="1002.0" progress="0.3" style="-fx-background-color: #14141b;" BorderPane.alignment="CENTER" />
+            </top>
+            <left>
+                <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <ImageView fx:id="album_picture" fitHeight="50.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@user.png" />
+                            </image>
+                        </ImageView>
+                        <VBox prefHeight="50.0" prefWidth="100.0">
+                            <children>
+                                <Label fx:id="music_label" prefHeight="25.0" prefWidth="100.0" text="I WISH" textFill="WHITE">
+                                    <font>
+                                        <Font name="JetBrains Mono ExtraBold Italic" size="15.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="author_label" layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="100.0" text="The Kid Laroi" textFill="#fffbfb">
+                                    <font>
+                                        <Font name="Iosevka" size="13.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+            </left>
+            <right>
+                <HBox fx:id="btn_next" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <FontIcon fx:id="btn_previous" iconColor="WHITE" iconLiteral="fa-fast-backward" iconSize="25">
+                            <HBox.margin>
+                                <Insets left="20.0" right="20.0" />
+                            </HBox.margin>
+                        </FontIcon>
+                        <FontIcon fx:id="btn_play" iconColor="WHITE" iconLiteral="fa-play" iconSize="25" layoutY="23.0">
+                            <HBox.margin>
+                                <Insets left="20.0" right="20.0" />
+                            </HBox.margin>
+                        </FontIcon>
+                        <FontIcon fx:id="btn_nextn" iconColor="WHITE" iconLiteral="fa-fast-forward" iconSize="25" layoutY="23.0">
+                            <HBox.margin>
+                                <Insets left="20.0" right="20.0" />
+                            </HBox.margin>
+                        </FontIcon>
+                    </children>
+                </HBox>
+            </right>
+        </BorderPane>
         <AnchorPane fx:id="play_queue_anchor" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: GREEN;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
                 <AnchorPane fx:id="topNavbar1" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -29,7 +222,7 @@
                                 <Image url="@menu.png" />
                             </image>
                         </ImageView>
-                        <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="81.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="14.0" />
+                  <FontIcon iconColor="#6e0fd3" iconLiteral="fa-close" iconSize="22" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="8.0" />
                     </children>
                 </AnchorPane>
             </children>
@@ -38,12 +231,12 @@
             <children>
                 <AnchorPane fx:id="topNavbar4" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <children>
-                        <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="81.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="14.0" />
                         <ImageView fx:id="Menu_settings" fitHeight="22.0" fitWidth="22.0" layoutX="10.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="14.0">
                             <image>
                                 <Image url="@menu.png" />
                             </image>
                         </ImageView>
+                  <FontIcon iconColor="#6e0fd3" iconLiteral="fa-close" iconSize="22" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="8.0" />
                     </children>
                 </AnchorPane>
             </children>
@@ -52,47 +245,18 @@
             <children>
                 <AnchorPane fx:id="topNavbar3" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <children>
-                        <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="81.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="14.0" />
                         <ImageView fx:id="Menu_folders" fitHeight="22.0" fitWidth="22.0" layoutX="10.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="14.0">
                             <image>
                                 <Image url="@menu.png" />
                             </image>
                         </ImageView>
-                    </children>
-                </AnchorPane>
-            </children>
-        </AnchorPane>
-        <AnchorPane fx:id="home_anchor" layoutX="314.0" layoutY="92.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: RED;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-            <children>
-                <AnchorPane fx:id="topNavbar" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                    <children>
-                        <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="81.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="14.0" />
-                        <ImageView fx:id="Menu" fitHeight="22.0" fitWidth="22.0" layoutX="10.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="14.0">
-                            <image>
-                                <Image url="@menu.png" />
-                            </image>
-                        </ImageView>
+                  <FontIcon iconColor="#6e0fd3" iconLiteral="fa-close" iconSize="22" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="8.0" />
                     </children>
                 </AnchorPane>
             </children>
         </AnchorPane>
         <AnchorPane fx:id="music_info_anchor" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: YELLOW;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
-                <AnchorPane fx:id="topNavbar2" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                    <children>
-                        <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="81.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="14.0" />
-                        <ImageView fx:id="Menu_music_info" fitHeight="22.0" fitWidth="22.0" layoutX="10.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="14.0">
-                            <image>
-                                <Image url="@menu.png" />
-                            </image>
-                        </ImageView>
-                        <Label layoutX="56.0" layoutY="16.0" text="My Library">
-                            <font>
-                                <Font name="JetBrains Mono NL SemiBold Italic" size="20.0" />
-                            </font>
-                        </Label>
-                    </children>
-                </AnchorPane>
                 <AnchorPane layoutX="35.0" layoutY="50.0" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
                     <effect>
                         <DropShadow height="1.75" offsetY="2.0" radius="0.0" width="0.0">
@@ -161,6 +325,21 @@
                             </font>
                         </Label>
                     </children></Pane>
+                <AnchorPane fx:id="topNavbar2" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <ImageView fx:id="Menu_music_info" fitHeight="22.0" fitWidth="22.0" layoutX="10.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="14.0">
+                            <image>
+                                <Image url="@menu.png" />
+                            </image>
+                        </ImageView>
+                        <Label layoutX="56.0" layoutY="16.0" text="My Library">
+                            <font>
+                                <Font name="JetBrains Mono NL SemiBold Italic" size="20.0" />
+                            </font>
+                        </Label>
+                  <FontIcon iconColor="#6e0fd3" iconLiteral="fa-close" iconSize="22" layoutX="970.0" layoutY="32.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="8.0" />
+                    </children>
+                </AnchorPane>
                 <Pane fx:id="music_songs_pane" layoutX="10.0" layoutY="92.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: WHITE;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="92.0">
                     <children>
                         <JFXListView fx:id="song_view" prefHeight="508.0" prefWidth="1000.0" />
@@ -168,197 +347,19 @@
                 </Pane>
             </children>
         </AnchorPane>
-        <AnchorPane fx:id="sidebar" layoutX="-27.0" layoutY="72.0" prefHeight="415.0" prefWidth="200.0" style="-fx-background-color: #14141b;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <AnchorPane fx:id="home_anchor" layoutX="314.0" layoutY="92.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: RED;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
-                <VBox layoutX="20.0" layoutY="-7.0" prefHeight="453.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <AnchorPane fx:id="topNavbar" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <children>
-                        <JFXButton fx:id="btn_home" alignment="BASELINE_LEFT" cache="true" defaultButton="true" graphicTextGap="22.0" prefHeight="50.0" prefWidth="200.0" styleClass="sidebar" stylesheets="@css/styles.css" text="Home" textFill="WHITE">
-                            <font>
-                                <Font name="JetBrains Mono SemiBold" size="15.0" />
-                            </font>
-                            <graphic>
-                                <FontIcon iconColor="#6e0fd3" iconLiteral="fa-home" iconSize="30" />
-                            </graphic>
-                            <VBox.margin>
-                                <Insets />
-                            </VBox.margin>
-                            <padding>
-                                <Insets left="30.0" />
-                            </padding>
-                        </JFXButton>
-                        <JFXButton fx:id="btn_queue" alignment="BASELINE_LEFT" cache="true" graphicTextGap="22.0" prefHeight="50.0" prefWidth="200.0" styleClass="sidebar" stylesheets="@css/styles.css" text="Play queue" textFill="WHITE">
-                            <font>
-                                <Font name="JetBrains Mono SemiBold" size="15.0" />
-                            </font>
-                            <graphic>
-                                <FontIcon iconColor="#f5ce09" iconLiteral="fa-home" iconSize="30" />
-                            </graphic>
-                            <VBox.margin>
-                                <Insets />
-                            </VBox.margin>
-                            <opaqueInsets>
-                                <Insets />
-                            </opaqueInsets>
-                            <padding>
-                                <Insets left="30.0" />
-                            </padding>
-                        </JFXButton>
-                        <JFXButton fx:id="btn_playlist" alignment="BASELINE_LEFT" cache="true" graphicTextGap="22.0" prefHeight="50.0" prefWidth="200.0" styleClass="sidebar" stylesheets="@css/styles.css" text="Playlists" textFill="WHITE">
-                            <font>
-                                <Font name="JetBrains Mono SemiBold" size="15.0" />
-                            </font>
-                            <graphic>
-                                <FontIcon iconColor="#115ad1" iconLiteral="fa-list" iconSize="30" />
-                            </graphic>
-                            <VBox.margin>
-                                <Insets />
-                            </VBox.margin>
-                            <padding>
-                                <Insets left="30.0" />
-                            </padding>
-                        </JFXButton>
-                        <JFXButton fx:id="btn_artists" alignment="BASELINE_LEFT" cache="true" graphicTextGap="22.0" prefHeight="50.0" prefWidth="200.0" styleClass="sidebar" stylesheets="@css/styles.css" text="Artists" textFill="WHITE">
-                            <font>
-                                <Font name="JetBrains Mono SemiBold" size="15.0" />
-                            </font>
-                            <graphic>
-                                <FontIcon iconColor="#dd1b09" iconLiteral="fa-user-circle" iconSize="30" />
-                            </graphic>
-                            <VBox.margin>
-                                <Insets />
-                            </VBox.margin>
-                            <padding>
-                                <Insets left="30.0" />
-                            </padding>
-                        </JFXButton>
-                        <JFXButton fx:id="btn_albums" alignment="BASELINE_LEFT" cache="true" graphicTextGap="22.0" layoutX="10.0" layoutY="160.0" prefHeight="50.0" prefWidth="200.0" styleClass="sidebar" stylesheets="@css/styles.css" text="Albums" textFill="WHITE">
-                            <font>
-                                <Font name="JetBrains Mono SemiBold" size="15.0" />
-                            </font>
-                            <graphic>
-                                <FontIcon iconColor="#115ad1" iconLiteral="fa-vcard" iconSize="30" />
-                            </graphic>
-                            <VBox.margin>
-                                <Insets />
-                            </VBox.margin>
-                            <padding>
-                                <Insets left="30.0" />
-                            </padding>
-                        </JFXButton>
-                        <JFXButton fx:id="btn_songs" alignment="BASELINE_LEFT" cache="true" graphicTextGap="22.0" prefHeight="50.0" prefWidth="200.0" styleClass="sidebar" stylesheets="@css/styles.css" text="Songs" textFill="WHITE">
-                            <font>
-                                <Font name="JetBrains Mono SemiBold" size="15.0" />
-                            </font>
-                            <graphic>
-                                <FontIcon iconColor="#f5ce09" iconLiteral="fa-music" iconSize="30" />
-                            </graphic>
-                            <VBox.margin>
-                                <Insets />
-                            </VBox.margin>
-                            <padding>
-                                <Insets left="30.0" />
-                            </padding>
-                        </JFXButton>
-                        <JFXButton fx:id="btn_genres" alignment="BASELINE_LEFT" cache="true" graphicTextGap="22.0" prefHeight="50.0" prefWidth="200.0" styleClass="sidebar" stylesheets="@css/styles.css" text="Genres" textFill="WHITE">
-                            <font>
-                                <Font name="JetBrains Mono SemiBold" size="15.0" />
-                            </font>
-                            <graphic>
-                                <FontIcon iconColor="#6e0fd3" iconLiteral="fa-home" iconSize="30" />
-                            </graphic>
-                            <VBox.margin>
-                                <Insets />
-                            </VBox.margin>
-                            <padding>
-                                <Insets left="30.0" />
-                            </padding>
-                        </JFXButton>
-                        <JFXButton fx:id="btn_folders" alignment="BASELINE_LEFT" cache="true" graphicTextGap="22.0" prefHeight="50.0" prefWidth="200.0" styleClass="sidebar" stylesheets="@css/styles.css" text="Folders" textFill="WHITE">
-                            <font>
-                                <Font name="JetBrains Mono SemiBold" size="15.0" />
-                            </font>
-                            <graphic>
-                                <FontIcon iconColor="#f5ce09" iconLiteral="fa-folder" iconSize="30" />
-                            </graphic>
-                            <VBox.margin>
-                                <Insets />
-                            </VBox.margin>
-                            <padding>
-                                <Insets left="30.0" />
-                            </padding>
-                        </JFXButton>
-                        <Separator prefWidth="200.0" />
-                        <JFXButton fx:id="btn_settings" alignment="BASELINE_LEFT" cache="true" graphicTextGap="22.0" prefHeight="50.0" prefWidth="200.0" styleClass="sidebar" stylesheets="@css/styles.css" text="Settings" textFill="WHITE">
-                            <font>
-                                <Font name="JetBrains Mono SemiBold" size="15.0" />
-                            </font>
-                            <graphic>
-                                <FontIcon iconColor="#115ad1" iconLiteral="fa-gear" iconSize="30" />
-                            </graphic>
-                            <VBox.margin>
-                                <Insets />
-                            </VBox.margin>
-                            <padding>
-                                <Insets left="30.0" />
-                            </padding>
-                        </JFXButton>
-                    </children>
-                </VBox>
-            </children>
-            <effect>
-                <DropShadow />
-            </effect>
-        </AnchorPane>
-        <BorderPane fx:id="bottom_player" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: #14141b;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-            <top>
-                <ProgressBar fx:id="progress_bar" prefHeight="10.0" prefWidth="1002.0" progress="0.3" style="-fx-background-color: #14141b;" BorderPane.alignment="CENTER" />
-            </top>
-            <left>
-                <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-                    <children>
-                        <ImageView fx:id="album_picture" fitHeight="50.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="Menu" fitHeight="22.0" fitWidth="22.0" layoutX="10.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="14.0">
                             <image>
-                                <Image url="@user.png" />
+                                <Image url="@menu.png" />
                             </image>
                         </ImageView>
-                        <VBox prefHeight="50.0" prefWidth="100.0">
-                            <children>
-                                <Label fx:id="music_label" prefHeight="25.0" prefWidth="100.0" text="I WISH" textFill="WHITE">
-                                    <font>
-                                        <Font name="JetBrains Mono ExtraBold Italic" size="15.0" />
-                                    </font>
-                                </Label>
-                                <Label fx:id="author_label" layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="100.0" text="The Kid Laroi" textFill="#fffbfb">
-                                    <font>
-                                        <Font name="Iosevka" size="13.0" />
-                                    </font>
-                                </Label>
-                            </children>
-                        </VBox>
+                  <FontIcon iconColor="#6e0fd3" iconLiteral="fa-close" iconSize="22" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="8.0" />
                     </children>
-                </HBox>
-            </left>
-            <right>
-                <HBox fx:id="btn_next" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-                    <children>
-                        <FontIcon fx:id="btn_previous" iconColor="WHITE" iconLiteral="fa-fast-backward" iconSize="25">
-                            <HBox.margin>
-                                <Insets left="20.0" right="20.0" />
-                            </HBox.margin>
-                        </FontIcon>
-                        <FontIcon fx:id="btn_play" iconColor="WHITE" iconLiteral="fa-play" iconSize="25" layoutY="23.0">
-                            <HBox.margin>
-                                <Insets left="20.0" right="20.0" />
-                            </HBox.margin>
-                        </FontIcon>
-                        <FontIcon fx:id="btn_nextn" iconColor="WHITE" iconLiteral="fa-fast-forward" iconSize="25" layoutY="23.0">
-                            <HBox.margin>
-                                <Insets left="20.0" right="20.0" />
-                            </HBox.margin>
-                        </FontIcon>
-                    </children>
-                </HBox>
-            </right>
-        </BorderPane>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
     </children>
 </AnchorPane>

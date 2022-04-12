@@ -4,9 +4,12 @@ import javafx.animation.TranslateTransition;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
@@ -18,6 +21,7 @@ import org.kordamp.ikonli.javafx.FontIcon;
 
 import java.io.File;
 import java.io.FilenameFilter;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -67,6 +71,14 @@ public class HomeController implements Initializable {
         showBottomPlayer();
 
 
+        Parent ccc = null;
+        try {
+            ccc = new FXMLLoader(Home.class.getResource("play_queue_box.fxml")).load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        //home_scroll.getContent().set;
+
         song_view.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
@@ -80,12 +92,12 @@ public class HomeController implements Initializable {
         btn_play.setOnMouseClicked( mouseEvent -> {
 
             if (running == true){
-                if(btn_play.getIconLiteral() == "fa-play"){
+                if(btn_play.getIconLiteral() == "fa-pauses"){
                     mediaPlayer.pause();
-                    btn_play.setIconLiteral("fa-pause");
+                    btn_play.setIconLiteral("fa-play");
                 }else {
                     mediaPlayer.play();
-                    btn_play.setIconLiteral("fa-play");
+                    btn_play.setIconLiteral("fa-pause");
                 }
             }
             System.out.println(btn_play.getIconLiteral());
@@ -197,6 +209,8 @@ public class HomeController implements Initializable {
         btn_music_genres.setOnMouseClicked(mouseEvent -> {
             music_genres_pane.toFront();
         });
+
+
 
 
     }
