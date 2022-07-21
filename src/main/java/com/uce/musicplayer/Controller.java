@@ -48,23 +48,7 @@ public class Controller implements Initializable {
         //Music.updateDatabase();
         AllSongs = Music.startupData();
         //Some startup data
-
-        //Thread resize the flow pane if the size of the scrollpane is resized.
-
-//        Thread main = Thread.currentThread();
-//        new Thread(new Runnable() {
-//            @Override
-//            public void run() {
-//                while (main.isAlive()){
-//                    newlyAddedCard.setPrefWidth(newlyAddedPane.getWidth());
-//                    try {
-//                        Thread.sleep(1000);
-//                    } catch (InterruptedException e) {
-//                        throw new RuntimeException(e);
-//                    }
-//                }
-//            }
-//        }).start();
+        
 
         //=================================================================
         //Setting up the playque # Note this here is just a temporary implementation.

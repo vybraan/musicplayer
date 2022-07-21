@@ -12,3 +12,11 @@
     -fx-background-color: #F5FDFF;
     -fx-color: #0a0c0d;
 }
+
+.rounded-full {
+    -fx-border-radius: 10%;
+}
+
+.rounded-full:hover {
+    -fx-border-radius: 10%;
+}
