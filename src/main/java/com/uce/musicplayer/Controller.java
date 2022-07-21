@@ -48,7 +48,7 @@ public class Controller implements Initializable {
         //Music.updateDatabase();
         AllSongs = Music.startupData();
         //Some startup data
-        
+
 
         //=================================================================
         //Setting up the playque # Note this here is just a temporary implementation.
@@ -56,6 +56,9 @@ public class Controller implements Initializable {
         //ListView llll = new ListView();
 
         PlayQueue = new ArrayList<>(PlayQueue());
+        hSongView.setFillWidth(true);
+        System.out.println(hSongView.isFillWidth());
+        System.out.println(hSongView.widthProperty());
         int i = 0;
         try {
             for (Song v: PlayQueue) {
@@ -71,6 +74,7 @@ public class Controller implements Initializable {
                     songview.getStyleClass().add("viewLight");
                 }else {
                     songview.getStyleClass().add("viewDark");
+
                 }
 
                 hSongView.getChildren().add(songview);
