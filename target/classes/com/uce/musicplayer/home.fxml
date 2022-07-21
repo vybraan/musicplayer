@@ -13,7 +13,6 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.TilePane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
@@ -21,147 +20,6 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: GREEN;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uce.musicplayer.HomeController">
     <children>
-        <AnchorPane fx:id="sidebar" layoutX="-27.0" layoutY="72.0" prefHeight="415.0" prefWidth="200.0" style="-fx-background-color: #14141b;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
-            <children>
-                <VBox layoutX="20.0" layoutY="-7.0" prefHeight="453.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                    <children>
-                        <JFXButton fx:id="btn_home" alignment="BASELINE_LEFT" cache="true" defaultButton="true" graphicTextGap="22.0" prefHeight="50.0" prefWidth="200.0" styleClass="sidebar" stylesheets="@css/styles.css" text="Home" textFill="WHITE">
-                            <font>
-                                <Font name="JetBrains Mono SemiBold" size="12.0" />
-                            </font>
-                            <graphic>
-                                <FontIcon iconColor="#6e0fd3" iconLiteral="fa-home" iconSize="22" />
-                            </graphic>
-                            <VBox.margin>
-                                <Insets />
-                            </VBox.margin>
-                            <padding>
-                                <Insets left="30.0" />
-                            </padding>
-                        </JFXButton>
-                        <JFXButton fx:id="btn_queue" alignment="BASELINE_LEFT" cache="true" graphicTextGap="22.0" prefHeight="50.0" prefWidth="200.0" styleClass="sidebar" stylesheets="@css/styles.css" text="Play queue" textFill="WHITE">
-                            <font>
-                                <Font name="JetBrains Mono SemiBold" size="12.0" />
-                            </font>
-                            <graphic>
-                                <FontIcon iconColor="#f5ce09" iconLiteral="fa-home" iconSize="22" />
-                            </graphic>
-                            <VBox.margin>
-                                <Insets />
-                            </VBox.margin>
-                            <opaqueInsets>
-                                <Insets />
-                            </opaqueInsets>
-                            <padding>
-                                <Insets left="30.0" />
-                            </padding>
-                        </JFXButton>
-                        <JFXButton fx:id="btn_playlist" alignment="BASELINE_LEFT" cache="true" graphicTextGap="22.0" prefHeight="50.0" prefWidth="200.0" styleClass="sidebar" stylesheets="@css/styles.css" text="Playlists" textFill="WHITE">
-                            <font>
-                                <Font name="JetBrains Mono SemiBold" size="12.0" />
-                            </font>
-                            <graphic>
-                                <FontIcon iconColor="#115ad1" iconLiteral="fa-list" iconSize="22" />
-                            </graphic>
-                            <VBox.margin>
-                                <Insets />
-                            </VBox.margin>
-                            <padding>
-                                <Insets left="30.0" />
-                            </padding>
-                        </JFXButton>
-                        <JFXButton fx:id="btn_artists" alignment="BASELINE_LEFT" cache="true" graphicTextGap="22.0" prefHeight="50.0" prefWidth="200.0" styleClass="sidebar" stylesheets="@css/styles.css" text="Artists" textFill="WHITE">
-                            <font>
-                                <Font name="JetBrains Mono SemiBold" size="12.0" />
-                            </font>
-                            <graphic>
-                                <FontIcon iconColor="#dd1b09" iconLiteral="fa-user-circle" iconSize="22" />
-                            </graphic>
-                            <VBox.margin>
-                                <Insets />
-                            </VBox.margin>
-                            <padding>
-                                <Insets left="30.0" />
-                            </padding>
-                        </JFXButton>
-                        <JFXButton fx:id="btn_albums" alignment="BASELINE_LEFT" cache="true" graphicTextGap="22.0" layoutX="10.0" layoutY="160.0" prefHeight="50.0" prefWidth="200.0" styleClass="sidebar" stylesheets="@css/styles.css" text="Albums" textFill="WHITE">
-                            <font>
-                                <Font name="JetBrains Mono SemiBold" size="12.0" />
-                            </font>
-                            <graphic>
-                                <FontIcon iconColor="#115ad1" iconLiteral="fa-vcard" iconSize="22" />
-                            </graphic>
-                            <VBox.margin>
-                                <Insets />
-                            </VBox.margin>
-                            <padding>
-                                <Insets left="30.0" />
-                            </padding>
-                        </JFXButton>
-                        <JFXButton fx:id="btn_songs" alignment="BASELINE_LEFT" cache="true" graphicTextGap="22.0" prefHeight="50.0" prefWidth="200.0" styleClass="sidebar" stylesheets="@css/styles.css" text="Songs" textFill="WHITE">
-                            <font>
-                                <Font name="JetBrains Mono SemiBold" size="12.0" />
-                            </font>
-                            <graphic>
-                                <FontIcon iconColor="#f5ce09" iconLiteral="fa-music" iconSize="22" />
-                            </graphic>
-                            <VBox.margin>
-                                <Insets />
-                            </VBox.margin>
-                            <padding>
-                                <Insets left="30.0" />
-                            </padding>
-                        </JFXButton>
-                        <JFXButton fx:id="btn_genres" alignment="BASELINE_LEFT" cache="true" graphicTextGap="22.0" prefHeight="50.0" prefWidth="200.0" styleClass="sidebar" stylesheets="@css/styles.css" text="Genres" textFill="WHITE">
-                            <font>
-                                <Font name="JetBrains Mono SemiBold" size="12.0" />
-                            </font>
-                            <graphic>
-                                <FontIcon iconColor="#6e0fd3" iconLiteral="fa-home" iconSize="22" />
-                            </graphic>
-                            <VBox.margin>
-                                <Insets />
-                            </VBox.margin>
-                            <padding>
-                                <Insets left="30.0" />
-                            </padding>
-                        </JFXButton>
-                        <JFXButton fx:id="btn_folders" alignment="BASELINE_LEFT" cache="true" graphicTextGap="22.0" prefHeight="50.0" prefWidth="200.0" styleClass="sidebar" stylesheets="@css/styles.css" text="Folders" textFill="WHITE">
-                            <font>
-                                <Font name="JetBrains Mono SemiBold" size="12.0" />
-                            </font>
-                            <graphic>
-                                <FontIcon iconColor="#f5ce09" iconLiteral="fa-folder" iconSize="22" />
-                            </graphic>
-                            <VBox.margin>
-                                <Insets />
-                            </VBox.margin>
-                            <padding>
-                                <Insets left="30.0" />
-                            </padding>
-                        </JFXButton>
-                        <Separator prefWidth="200.0" />
-                        <JFXButton fx:id="btn_settings" alignment="BASELINE_LEFT" cache="true" graphicTextGap="22.0" prefHeight="50.0" prefWidth="200.0" styleClass="sidebar" stylesheets="@css/styles.css" text="Settings" textFill="WHITE">
-                            <font>
-                                <Font name="JetBrains Mono SemiBold" size="12.0" />
-                            </font>
-                            <graphic>
-                                <FontIcon iconColor="#115ad1" iconLiteral="fa-gear" iconSize="22" />
-                            </graphic>
-                            <VBox.margin>
-                                <Insets />
-                            </VBox.margin>
-                            <padding>
-                                <Insets left="30.0" />
-                            </padding>
-                        </JFXButton>
-                    </children>
-                </VBox>
-            </children>
-            <effect>
-                <DropShadow />
-            </effect>
-        </AnchorPane>
         <BorderPane fx:id="bottom_player" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: #14141b;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
             <top>
                 <ProgressBar fx:id="progress_bar" prefHeight="10.0" prefWidth="1002.0" progress="0.3" style="-fx-background-color: #14141b;" BorderPane.alignment="CENTER" />
@@ -360,6 +218,147 @@
                     </children>
                 </AnchorPane>
             </children>
+        </AnchorPane>
+        <AnchorPane fx:id="sidebar" layoutX="-27.0" layoutY="72.0" prefHeight="415.0" prefWidth="200.0" style="-fx-background-color: #14141b;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <VBox layoutX="20.0" layoutY="-7.0" prefHeight="453.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <JFXButton fx:id="btn_home" alignment="BASELINE_LEFT" cache="true" defaultButton="true" graphicTextGap="22.0" prefHeight="50.0" prefWidth="200.0" styleClass="sidebar" stylesheets="@css/styles.css" text="Home" textFill="WHITE">
+                            <font>
+                                <Font name="JetBrains Mono SemiBold" size="12.0" />
+                            </font>
+                            <graphic>
+                                <FontIcon iconColor="#6e0fd3" iconLiteral="fa-home" iconSize="22" />
+                            </graphic>
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin>
+                            <padding>
+                                <Insets left="30.0" />
+                            </padding>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_queue" alignment="BASELINE_LEFT" cache="true" graphicTextGap="22.0" prefHeight="50.0" prefWidth="200.0" styleClass="sidebar" stylesheets="@css/styles.css" text="Play queue" textFill="WHITE">
+                            <font>
+                                <Font name="JetBrains Mono SemiBold" size="12.0" />
+                            </font>
+                            <graphic>
+                                <FontIcon iconColor="#f5ce09" iconLiteral="fa-home" iconSize="22" />
+                            </graphic>
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin>
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                            <padding>
+                                <Insets left="30.0" />
+                            </padding>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_playlist" alignment="BASELINE_LEFT" cache="true" graphicTextGap="22.0" prefHeight="50.0" prefWidth="200.0" styleClass="sidebar" stylesheets="@css/styles.css" text="Playlists" textFill="WHITE">
+                            <font>
+                                <Font name="JetBrains Mono SemiBold" size="12.0" />
+                            </font>
+                            <graphic>
+                                <FontIcon iconColor="#115ad1" iconLiteral="fa-list" iconSize="22" />
+                            </graphic>
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin>
+                            <padding>
+                                <Insets left="30.0" />
+                            </padding>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_artists" alignment="BASELINE_LEFT" cache="true" graphicTextGap="22.0" prefHeight="50.0" prefWidth="200.0" styleClass="sidebar" stylesheets="@css/styles.css" text="Artists" textFill="WHITE">
+                            <font>
+                                <Font name="JetBrains Mono SemiBold" size="12.0" />
+                            </font>
+                            <graphic>
+                                <FontIcon iconColor="#dd1b09" iconLiteral="fa-user-circle" iconSize="22" />
+                            </graphic>
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin>
+                            <padding>
+                                <Insets left="30.0" />
+                            </padding>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_albums" alignment="BASELINE_LEFT" cache="true" graphicTextGap="22.0" layoutX="10.0" layoutY="160.0" prefHeight="50.0" prefWidth="200.0" styleClass="sidebar" stylesheets="@css/styles.css" text="Albums" textFill="WHITE">
+                            <font>
+                                <Font name="JetBrains Mono SemiBold" size="12.0" />
+                            </font>
+                            <graphic>
+                                <FontIcon iconColor="#115ad1" iconLiteral="fa-vcard" iconSize="22" />
+                            </graphic>
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin>
+                            <padding>
+                                <Insets left="30.0" />
+                            </padding>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_songs" alignment="BASELINE_LEFT" cache="true" graphicTextGap="22.0" prefHeight="50.0" prefWidth="200.0" styleClass="sidebar" stylesheets="@css/styles.css" text="Songs" textFill="WHITE">
+                            <font>
+                                <Font name="JetBrains Mono SemiBold" size="12.0" />
+                            </font>
+                            <graphic>
+                                <FontIcon iconColor="#f5ce09" iconLiteral="fa-music" iconSize="22" />
+                            </graphic>
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin>
+                            <padding>
+                                <Insets left="30.0" />
+                            </padding>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_genres" alignment="BASELINE_LEFT" cache="true" graphicTextGap="22.0" prefHeight="50.0" prefWidth="200.0" styleClass="sidebar" stylesheets="@css/styles.css" text="Genres" textFill="WHITE">
+                            <font>
+                                <Font name="JetBrains Mono SemiBold" size="12.0" />
+                            </font>
+                            <graphic>
+                                <FontIcon iconColor="#6e0fd3" iconLiteral="fa-home" iconSize="22" />
+                            </graphic>
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin>
+                            <padding>
+                                <Insets left="30.0" />
+                            </padding>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_folders" alignment="BASELINE_LEFT" cache="true" graphicTextGap="22.0" prefHeight="50.0" prefWidth="200.0" styleClass="sidebar" stylesheets="@css/styles.css" text="Folders" textFill="WHITE">
+                            <font>
+                                <Font name="JetBrains Mono SemiBold" size="12.0" />
+                            </font>
+                            <graphic>
+                                <FontIcon iconColor="#f5ce09" iconLiteral="fa-folder" iconSize="22" />
+                            </graphic>
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin>
+                            <padding>
+                                <Insets left="30.0" />
+                            </padding>
+                        </JFXButton>
+                        <Separator prefWidth="200.0" />
+                        <JFXButton fx:id="btn_settings" alignment="BASELINE_LEFT" cache="true" graphicTextGap="22.0" prefHeight="50.0" prefWidth="200.0" styleClass="sidebar" stylesheets="@css/styles.css" text="Settings" textFill="WHITE">
+                            <font>
+                                <Font name="JetBrains Mono SemiBold" size="12.0" />
+                            </font>
+                            <graphic>
+                                <FontIcon iconColor="#115ad1" iconLiteral="fa-gear" iconSize="22" />
+                            </graphic>
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin>
+                            <padding>
+                                <Insets left="30.0" />
+                            </padding>
+                        </JFXButton>
+                    </children>
+                </VBox>
+            </children>
+            <effect>
+                <DropShadow />
+            </effect>
         </AnchorPane>
     </children>
 </AnchorPane>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<HBox alignment="CENTER" maxHeight="50.0" minHeight="-Infinity" minWidth="500.0" prefHeight="50.0" styleClass="view" stylesheets="@../css/songview.css" HBox.hgrow="ALWAYS" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uce.musicplayer.SongViewController">
+   <children>
+      <HBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+         <children>
+            <JFXButton contentDisplay="GRAPHIC_ONLY">
+               <graphic>
+                  <FontIcon iconColor="#0ec77e" iconLiteral="fa-play" />
+               </graphic>
+            </JFXButton>
+            <Label fx:id="vTitle" text="Title Of Song" textFill="#0ec77e">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+         <children>
+            <Label fx:id="vArtist" text="Artista" textFill="#0ec77e">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+         <children>
+            <Label fx:id="vAlbum" text="Album" textFill="#0ec77e">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+         <children>
+            <Label fx:id="vYear" text="Ano" textFill="#0ec77e">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+         <children>
+            <Label fx:id="vStyle" text="Estitlo" textFill="#0ec77e">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_RIGHT">
+         <children>
+            <Label fx:id="vTime" text="3:55" textFill="#0ec77e">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</HBox>

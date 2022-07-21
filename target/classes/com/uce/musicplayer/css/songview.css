@@ -1,0 +1,14 @@
+.view:hover {
+    -fx-background-color: #DEFDF0;
+}
+
+.viewDark {
+     -fx-background-color: #0a0c0d;
+     -fx-color: #0ec77e;
+
+}
+
+.viewLight {
+    -fx-background-color: #F5FDFF;
+    -fx-color: #0a0c0d;
+}
