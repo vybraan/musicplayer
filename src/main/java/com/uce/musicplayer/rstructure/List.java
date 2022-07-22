@@ -1,6 +1,6 @@
 package com.uce.musicplayer.rstructure;
 
-public class List implements ListInterface{
+public class List<S> implements ListInterface{
     private Node beginning;
     private Node end;
 
