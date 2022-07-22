@@ -5,26 +5,35 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.ColorAdjust?>
 <?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<AnchorPane prefHeight="650.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uce.musicplayer.Controller">
+<AnchorPane prefHeight="650.0" prefWidth="1050.0" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uce.musicplayer.Controller">
    <children>
       <BorderPane layoutX="433.0" layoutY="131.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
-            <AnchorPane prefHeight="60.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: #0a0c0d;" BorderPane.alignment="CENTER">
                <effect>
                   <DropShadow blurType="ONE_PASS_BOX" />
                </effect>
+               <children>
+                  <Label layoutX="262.0" layoutY="21.0" text="UC Erudition | Player" textFill="#f5fdff">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
             </AnchorPane>
          </top>
          <bottom>
@@ -51,7 +60,7 @@
                                  <children>
                                     <Label prefHeight="22.0" text="The Diference">
                                        <font>
-                                          <Font name="System Bold" size="13.0" />
+                                          <Font name="Segoe UI Bold" size="13.0" />
                                        </font>
                                     </Label>
                                     <Label prefHeight="22.0" text="Label" />
@@ -142,23 +151,27 @@
          <center>
             <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
                <children>
-                  <AnchorPane prefHeight="38.0" prefWidth="801.0" style="r: yellow;">
+                  <AnchorPane prefHeight="100.0" prefWidth="801.0" style="-fx-background-color: #801515;" />
+                  <AnchorPane VBox.vgrow="ALWAYS">
                      <children>
-                        <Label layoutX="368.0" layoutY="60.0" prefHeight="46.0" prefWidth="288.0" text="Play Queue header" AnchorPane.rightAnchor="144.64935120214" />
+                        <ScrollPane hbarPolicy="NEVER" styleClass="scroll-bar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <content>
+                              <VBox fx:id="hSongView" alignment="TOP_CENTER" style="-fx-background-color: yellow;">
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                        </ScrollPane>
                      </children>
                   </AnchorPane>
-                  <FlowPane VBox.vgrow="ALWAYS">
-                     <children>
-                        <VBox fx:id="hSongView" alignment="TOP_CENTER" />
-                     </children>
-                  </FlowPane>
                </children>
             </VBox>
          </center>
       </BorderPane>
       <AnchorPane layoutY="92.0" prefHeight="200.0" prefWidth="250.0" style="-fx-background-color: #F5FDFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <AnchorPane layoutY="158.0" prefHeight="200.0" prefWidth="50.0" style="-fx-background-color: #0a0c0d;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <AnchorPane layoutY="158.0" prefHeight="364.0" prefWidth="50.0" style="-fx-background-color: #0a0c0d;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="102.0">
                <effect>
                   <DropShadow />
                </effect>
@@ -170,7 +183,7 @@
                         <FontIcon iconColor="#0ec77e" iconLiteral="fa-home" iconSize="20" />
                      </graphic>
                      <font>
-                        <Font name="DejaVu Sans Bold" size="13.0" />
+                        <Font name="Segoe UI Bold" size="13.0" />
                      </font>
                      <padding>
                         <Insets left="17.0" />
@@ -181,7 +194,7 @@
                         <FontIcon iconColor="#0ec77e" iconLiteral="fa-list" iconSize="20" />
                      </graphic>
                      <font>
-                        <Font name="DejaVu Sans Bold" size="13.0" />
+                        <Font name="Segoe UI Bold" size="13.0" />
                      </font>
                      <padding>
                         <Insets left="16.0" />
@@ -192,7 +205,7 @@
                         <FontIcon iconColor="#0ec77e" iconLiteral="fa-user-circle" iconSize="20" />
                      </graphic>
                      <font>
-                        <Font name="DejaVu Sans Bold" size="13.0" />
+                        <Font name="Segoe UI Bold" size="13.0" />
                      </font>
                      <padding>
                         <Insets left="16.0" />
@@ -203,7 +216,7 @@
                         <FontIcon iconColor="#0ec77e" iconLiteral="fa-leanpub" iconSize="20" />
                      </graphic>
                      <font>
-                        <Font name="DejaVu Sans Bold" size="13.0" />
+                        <Font name="Segoe UI Bold" size="13.0" />
                      </font>
                      <padding>
                         <Insets left="15.0" />
@@ -214,7 +227,7 @@
                         <FontIcon iconColor="#0ec77e" iconLiteral="fa-music" iconSize="20" />
                      </graphic>
                      <font>
-                        <Font name="DejaVu Sans Bold" size="13.0" />
+                        <Font name="Segoe UI Bold" size="13.0" />
                      </font>
                      <padding>
                         <Insets left="18.0" />
@@ -225,7 +238,7 @@
                         <FontIcon iconColor="#0ec77e" iconLiteral="fa-shekel" iconSize="20" />
                      </graphic>
                      <font>
-                        <Font name="DejaVu Sans Bold" size="13.0" />
+                        <Font name="Segoe UI Bold" size="13.0" />
                      </font>
                      <padding>
                         <Insets left="18.0" />
@@ -236,7 +249,7 @@
                         <FontIcon iconColor="#0ec77e" iconLiteral="fa-folder" iconSize="20" />
                      </graphic>
                      <font>
-                        <Font name="DejaVu Sans Bold" size="13.0" />
+                        <Font name="Segoe UI Bold" size="13.0" />
                      </font>
                      <padding>
                         <Insets left="18.0" />
@@ -247,7 +260,7 @@
                         <FontIcon iconColor="#0ec77e" iconLiteral="fa-gear" iconSize="20" />
                      </graphic>
                      <font>
-                        <Font name="DejaVu Sans Bold" size="13.0" />
+                        <Font name="Segoe UI Bold" size="13.0" />
                      </font>
                      <padding>
                         <Insets left="18.0" />
@@ -255,6 +268,19 @@
                   </JFXButton>
                </children>
             </VBox>
+            <HBox alignment="CENTER" layoutX="55.0" layoutY="17.0" style="-fx-background-color: white;" styleClass="rounded-full" stylesheets="@../css/app.css" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="17.0">
+               <children>
+                  <TextField minWidth="170.0" promptText="Search" style="-fx-background-color: White;" styleClass="transparent" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Segoe UI Bold" size="14.0" />
+                     </font>
+                  </TextField>
+                  <FontIcon iconColor="#0ec77e" iconLiteral="fa-search" iconSize="20" />
+               </children>
+               <effect>
+                  <Reflection />
+               </effect>
+            </HBox>
          </children>
       </AnchorPane>
    </children>

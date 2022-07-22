@@ -1,8 +1,8 @@
 .btn: hover{
-    -fx-background-color: #e9f1f3;
     -fx-icon-size: 24px;
     -fx-font-size: 15;
     -fx-font-weight: bold;
+    -fx-background-color:  #FFAAAA;
 }
 
 
