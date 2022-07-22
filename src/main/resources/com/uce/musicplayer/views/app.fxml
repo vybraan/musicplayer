@@ -60,7 +60,7 @@
                                  <children>
                                     <Label prefHeight="22.0" text="The Diference">
                                        <font>
-                                          <Font name="System Bold" size="13.0" />
+                                          <Font name="Segoe UI Bold" size="13.0" />
                                        </font>
                                     </Label>
                                     <Label prefHeight="22.0" text="Label" />
@@ -156,7 +156,11 @@
                      <children>
                         <ScrollPane hbarPolicy="NEVER" styleClass="scroll-bar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <content>
-                              <VBox fx:id="hSongView" alignment="TOP_CENTER" style="-fx-background-color: yellow;" />
+                              <VBox fx:id="hSongView" alignment="TOP_CENTER" style="-fx-background-color: yellow;">
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </VBox>
                            </content>
                         </ScrollPane>
                      </children>
@@ -179,7 +183,7 @@
                         <FontIcon iconColor="#0ec77e" iconLiteral="fa-home" iconSize="20" />
                      </graphic>
                      <font>
-                        <Font name="DejaVu Sans Bold" size="13.0" />
+                        <Font name="Segoe UI Bold" size="13.0" />
                      </font>
                      <padding>
                         <Insets left="17.0" />
@@ -190,7 +194,7 @@
                         <FontIcon iconColor="#0ec77e" iconLiteral="fa-list" iconSize="20" />
                      </graphic>
                      <font>
-                        <Font name="DejaVu Sans Bold" size="13.0" />
+                        <Font name="Segoe UI Bold" size="13.0" />
                      </font>
                      <padding>
                         <Insets left="16.0" />
@@ -201,7 +205,7 @@
                         <FontIcon iconColor="#0ec77e" iconLiteral="fa-user-circle" iconSize="20" />
                      </graphic>
                      <font>
-                        <Font name="DejaVu Sans Bold" size="13.0" />
+                        <Font name="Segoe UI Bold" size="13.0" />
                      </font>
                      <padding>
                         <Insets left="16.0" />
@@ -212,7 +216,7 @@
                         <FontIcon iconColor="#0ec77e" iconLiteral="fa-leanpub" iconSize="20" />
                      </graphic>
                      <font>
-                        <Font name="DejaVu Sans Bold" size="13.0" />
+                        <Font name="Segoe UI Bold" size="13.0" />
                      </font>
                      <padding>
                         <Insets left="15.0" />
@@ -223,7 +227,7 @@
                         <FontIcon iconColor="#0ec77e" iconLiteral="fa-music" iconSize="20" />
                      </graphic>
                      <font>
-                        <Font name="DejaVu Sans Bold" size="13.0" />
+                        <Font name="Segoe UI Bold" size="13.0" />
                      </font>
                      <padding>
                         <Insets left="18.0" />
@@ -234,7 +238,7 @@
                         <FontIcon iconColor="#0ec77e" iconLiteral="fa-shekel" iconSize="20" />
                      </graphic>
                      <font>
-                        <Font name="DejaVu Sans Bold" size="13.0" />
+                        <Font name="Segoe UI Bold" size="13.0" />
                      </font>
                      <padding>
                         <Insets left="18.0" />
@@ -245,7 +249,7 @@
                         <FontIcon iconColor="#0ec77e" iconLiteral="fa-folder" iconSize="20" />
                      </graphic>
                      <font>
-                        <Font name="DejaVu Sans Bold" size="13.0" />
+                        <Font name="Segoe UI Bold" size="13.0" />
                      </font>
                      <padding>
                         <Insets left="18.0" />
@@ -256,7 +260,7 @@
                         <FontIcon iconColor="#0ec77e" iconLiteral="fa-gear" iconSize="20" />
                      </graphic>
                      <font>
-                        <Font name="DejaVu Sans Bold" size="13.0" />
+                        <Font name="Segoe UI Bold" size="13.0" />
                      </font>
                      <padding>
                         <Insets left="18.0" />
@@ -268,7 +272,7 @@
                <children>
                   <TextField minWidth="170.0" promptText="Search" style="-fx-background-color: White;" styleClass="transparent" HBox.hgrow="ALWAYS">
                      <font>
-                        <Font name="JetBrains Mono NL ExtraBold" size="14.0" />
+                        <Font name="Segoe UI Bold" size="14.0" />
                      </font>
                   </TextField>
                   <FontIcon iconColor="#0ec77e" iconLiteral="fa-search" iconSize="20" />

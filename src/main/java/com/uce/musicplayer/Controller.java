@@ -56,9 +56,8 @@ public class Controller implements Initializable {
         //ListView llll = new ListView();
 
         PlayQueue = new ArrayList<>(PlayQueue());
-        hSongView.setFillWidth(true);
-        System.out.println(hSongView.isFillWidth());
-        System.out.println(hSongView.widthProperty());
+        hSongView.fillWidthProperty().set(true);
+
         int i = 0;
         try {
             for (Song v: PlayQueue) {
@@ -66,6 +65,7 @@ public class Controller implements Initializable {
                 FXMLLoader fxmlLoader = new FXMLLoader();
                 fxmlLoader.setLocation(getClass().getResource("views/SongView.fxml"));
                 HBox songview = fxmlLoader.load();
+                //songview.width//.set(true);
 
                 SongViewController songViewController = fxmlLoader.getController();
                 songViewController.setData(v);
