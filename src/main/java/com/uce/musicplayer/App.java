@@ -17,5 +17,7 @@ public class App extends Application {
         stage.setTitle("UCE Player");
         stage.setScene(scene);
         stage.show();
+
+
     }
 }

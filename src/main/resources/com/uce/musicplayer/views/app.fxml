@@ -5,7 +5,6 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.ColorAdjust?>
 <?import javafx.scene.effect.DropShadow?>
@@ -152,19 +151,7 @@
             <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
                <children>
                   <AnchorPane prefHeight="100.0" prefWidth="801.0" style="-fx-background-color: #801515;" />
-                  <AnchorPane VBox.vgrow="ALWAYS">
-                     <children>
-                        <ScrollPane hbarPolicy="NEVER" styleClass="scroll-bar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                           <content>
-                              <VBox fx:id="hSongView" alignment="TOP_CENTER" style="-fx-background-color: yellow;">
-                                 <padding>
-                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                                 </padding>
-                              </VBox>
-                           </content>
-                        </ScrollPane>
-                     </children>
-                  </AnchorPane>
+                  <AnchorPane fx:id="mainnn" VBox.vgrow="ALWAYS" />
                </children>
             </VBox>
          </center>
@@ -268,9 +255,9 @@
                   </JFXButton>
                </children>
             </VBox>
-            <HBox alignment="CENTER" layoutX="55.0" layoutY="17.0" style="-fx-background-color: white;" styleClass="rounded-full" stylesheets="@../css/app.css" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="17.0">
+            <HBox alignment="CENTER" layoutX="55.0" layoutY="17.0" prefWidth="45.0" style="-fx-background-color: white;" styleClass="rounded-full" stylesheets="@../css/app.css" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="17.0">
                <children>
-                  <TextField minWidth="170.0" promptText="Search" style="-fx-background-color: White;" styleClass="transparent" HBox.hgrow="ALWAYS">
+                  <TextField minWidth="170.0" prefHeight="45.0" promptText="Search" style="-fx-background-color: White;" styleClass="transparent" HBox.hgrow="ALWAYS">
                      <font>
                         <Font name="Segoe UI Bold" size="14.0" />
                      </font>

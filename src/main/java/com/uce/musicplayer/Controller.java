@@ -9,6 +9,7 @@ import javafx.geometry.Orientation;
 import javafx.scene.control.ListView;
 import javafx.scene.control.ScrollBar;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.control.TableView;
 import javafx.scene.control.skin.ListViewSkin;
 import javafx.scene.image.Image;
 import javafx.scene.layout.*;
@@ -31,6 +32,8 @@ public class Controller implements Initializable {
     private AnchorPane newlyAddedPane;
     @FXML
     private VBox hSongView;
+//    @FXML
+//    private ScrollPane hSongScroll;
 
     private ArrayList<Music> AllSongs;
     private ArrayList<Song> PlayQueue;
@@ -42,6 +45,9 @@ public class Controller implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        //hSongView.setPrefWidth(hSongScroll.getWidth());
+
 
         //Some startup data
         //Music.updateSongs();
