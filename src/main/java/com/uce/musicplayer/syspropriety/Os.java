@@ -52,7 +52,7 @@ public final class Os {
     }
 
     /**
-     * detect the operating system user from the User.name System property
+     * get the operating system user from the User.name System property
      *
      * @returns - the operating system current user detected
      */

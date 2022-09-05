@@ -73,12 +73,12 @@
 //        showBottomPlayer();
 //
 //
-//        Parent ccc = null;
-//        try {
-//            ccc = new FXMLLoader(Home.class.getResource("play_queue_box.fxml")).load();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+////        Parent ccc = null;
+////        try {
+////            ccc = new FXMLLoader(Home.class.getResource("play_queue_box.fxml")).load();
+////        } catch (IOException e) {
+////            e.printStackTrace();
+////        }
 ////        home_scroll.getContent();
 //
 //        song_view.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
